@@ -1,0 +1,19 @@
+2026-02-22 13:23:27.284 | ERROR    | __main__:_connect:73 - ❌ Database connection failed: No module named 'psycopg2'
+2026-02-22 13:24:08.610 | ERROR    | __main__:_connect:73 - ❌ Database connection failed: No module named 'psycopg2'
+2026-02-22 13:24:11.722 | ERROR    | app:_connect:73 - ❌ Database connection failed: No module named 'psycopg2'
+2026-02-22 13:24:11.722 | ERROR    | app:_connect:73 - ❌ Database connection failed: No module named 'psycopg2'
+2026-02-22 13:24:11.740 | INFO     | app:lifespan:344 - 🚀 AutoDW starting up...
+2026-02-22 13:24:11.740 | INFO     | app:lifespan:344 - 🚀 AutoDW starting up...
+2026-02-22 13:27:21.730 | ERROR    | __main__:_connect:73 - ❌ Database connection failed: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-22 13:27:24.560 | ERROR    | app:_connect:73 - ❌ Database connection failed: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-22 13:27:24.560 | ERROR    | app:_connect:73 - ❌ Database connection failed: (psycopg2.OperationalError) could not translate host name "db" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-02-22 13:27:24.579 | INFO     | app:lifespan:344 - 🚀 AutoDW starting up...
+2026-02-22 13:27:24.579 | INFO     | app:lifespan:344 - 🚀 AutoDW starting up...
+2026-02-22 13:27:24.583 | INFO     | app:lifespan:346 - 👋 AutoDW shutting down...
+2026-02-22 13:27:24.583 | INFO     | app:lifespan:346 - 👋 AutoDW shutting down...
