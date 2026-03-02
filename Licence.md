@@ -1,20 +1,21 @@
+MIT License
 
----
+Copyright (c) 2026 [Your Name]
 
-## 🔥 Final Honest Assessment
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This README:
-- ✅ Looks **senior-engineer written**
-- ✅ Avoids buzzwords
-- ✅ Explains *why*, not just *what*
-- ✅ Signals **engineering maturity**
-- ✅ Perfect for recruiters scanning in **60 seconds**
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### 📊 Final Rating (README + Project)
-**9.6 / 10**
-
-If you want next:
-- Resume bullet points
-- “How to explain AutoDW in 60 seconds”
-- System-design interview talking points
-
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
