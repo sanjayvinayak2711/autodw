@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDW - Automated Data Warehouse</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏗️ AutoDW</h1>
+            <p>Automated Data Warehouse - Upload CSVs, Get Star Schema</p>
+            <div style="margin-top: 20px;">
+                <span class="badge" id="status-badge">● Running</span>
+            </div>
+        </div>
+        
+        <div class="status">
+            <h2>📊 System Status</h2>
+            <div class="status-grid">
+                <div class="status-card">
+                    <h3 id="file-count">0</h3>
+                    <p>Files Uploaded</p>
+                </div>
+                <div class="status-card">
+                    <h3 id="project-count">0</h3>
+                    <p>Projects Built</p>
+                </div>
+                <div class="status-card">
+                    <h3 id="total-rows">0</h3>
+                    <p>Total Rows</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="upload-area" onclick="document.getElementById('file-input').click()">
+            <div class="upload-icon">📁</div>
+            <h3>Click to Upload CSV Files</h3>
+            <p>or drag and drop</p>
+            <input type="file" id="file-input" accept=".csv" multiple onchange="uploadFiles(this.files)">
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0;">
+            <button class="btn" onclick="buildWarehouse()">
+                🏗️ Build Warehouse
+            </button>
+            <button class="btn btn-secondary" onclick="refreshData()">
+                🔄 Refresh
+            </button>
+        </div>
+        
+        <div id="files-section">
+            <h2>📁 Uploaded Files</h2>
+            <div class="files-grid" id="files-grid">
+                <div style="text-align: center; padding: 40px; color: #999;">
+                    No files uploaded yet
+                </div>
+            </div>
+        </div>
+        
+        <div class="projects-list" id="projects-section">
+            <h2>📦 Built Projects</h2>
+            <div id="projects-list">
+                <div style="text-align: center; padding: 20px; color: #999;">
+                    No projects built yet
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+    
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
