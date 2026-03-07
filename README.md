@@ -124,15 +124,5 @@ AutoDW demonstrates:
 
 **This is the kind of work that transforms businesses.**
 
----
-
-## 🤝 **Let's Connect**
-
-📧 **Email**: [your-email@example.com]  
-💼 **LinkedIn**: [linkedin.com/in/yourprofile]  
-🐙 **GitHub**: [github.com/sanjayvinayak2711]  
-🌐 **Portfolio**: [your-portfolio-link]
-
----
-
 *⭐ **If you're impressed by innovative solutions that drive real business impact, give this project a star.**
+
