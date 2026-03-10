@@ -1,4 +1,4 @@
-# 🚀 AutoDW - AI-Powered Data Warehouse Automation
+# 🚀 AutoDW 
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.108+-green)](https://fastapi.tiangolo.com/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
