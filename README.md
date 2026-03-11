@@ -82,7 +82,7 @@ cd autodw
 docker-compose up -d
 
 # Open your browser
-open http://localhost:8001
+open http://localhost:8002
 That's it. Your data warehouse is running. 🎉
 
 📊 Performance Metrics
@@ -110,12 +110,12 @@ import requests
 # Upload a file
 with open('sales.csv', 'rb') as f:
     response = requests.post(
-        'http://localhost:8001/upload',
+        'http://localhost:8002/upload',
         files={'file': f}
     )
 
 # Build the warehouse
-response = requests.post('http://localhost:8001/build')
+response = requests.post('http://localhost:8002/build')
 print(f"Project created: {response.json()['project_id']}")
 🎯 Why This Matters
 🚀 Technical Excellence
@@ -166,13 +166,13 @@ AutoDW/
 🧪 Testing & Validation
 bash
 # Health check
-curl http://localhost:8001/health
+curl http://localhost:8002/health
 
 # Upload test file
-curl -X POST -F "file=@test.csv" http://localhost:8001/upload
+curl -X POST -F "file=@test.csv" http://localhost:8002/upload
 
 # Build warehouse
-curl -X POST http://localhost:8001/build
+curl -X POST http://localhost:8002/build
 
 📈 Future Roadmap
 Database Integration - Direct PostgreSQL/MySQL output

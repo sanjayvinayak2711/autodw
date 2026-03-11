@@ -1,7 +1,7 @@
 """
 AutoDW - Automated Data Warehouse with Browser Dashboard
 Run: python app.py or start.bat
-Click: http://localhost:8001
+Click: http://localhost:8002
 """
 
 import os
@@ -547,7 +547,7 @@ def open_browser():
     """Open browser when server starts"""
     import time
     time.sleep(2)  # Wait for server to start
-    webbrowser.open("http://localhost:8001")
+    webbrowser.open("http://localhost:8002")
 
 # MAIN
 
@@ -556,4 +556,4 @@ if __name__ == "__main__":
     threading.Thread(target=open_browser, daemon=True).start()
     
     # Run server
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=8002)
