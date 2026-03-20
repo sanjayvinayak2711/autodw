@@ -1,7 +1,7 @@
 """
 AutoDW - Automated Data Warehouse with Browser Dashboard
 Run: python app.py or start.bat
-Click: http://localhost:8002
+Click: http://localhost:8000
 """
 
 import os
@@ -27,7 +27,7 @@ _files_cache = None
 _cache_timestamp = None
 CACHE_DURATION = 30  # Cache for 30 seconds
 
-app = FastAPI(title="AutoDW", version="1.0.0")
+app = FastAPI(title="AutoDW", version="2.0.0")
 
 # Add CORS middleware
 app.add_middleware(
@@ -544,10 +544,23 @@ async def download_project(project_id: str, request: Request):
 # Auto-open browser
 
 def open_browser():
-    """Open browser when server starts"""
+    """Open browser when server starts (only when not in Docker)"""
     import time
+    import os
+    
+    # Check if running in Docker
+    if os.path.exists('/.dockerenv'):
+        print("Running in Docker container - skipping auto-browser opening")
+        return
+    
+    # Check for Docker-related environment variables
+    docker_env_vars = ['DOCKER_CONTAINER', 'KUBERNETES_SERVICE_HOST']
+    if any(var in os.environ for var in docker_env_vars):
+        print("Running in containerized environment - skipping auto-browser opening")
+        return
+    
     time.sleep(2)  # Wait for server to start
-    webbrowser.open("http://localhost:8002")
+    webbrowser.open("http://localhost:8000")
 
 # MAIN
 
@@ -555,5 +568,12 @@ if __name__ == "__main__":
     # Start browser in a separate thread
     threading.Thread(target=open_browser, daemon=True).start()
     
+    # Print correct URL for user
+    print("=" * 50)
+    print("🚀 AutoDW is starting!")
+    print("📱 Access your application at: http://localhost:8000")
+    print("🔗 Click here: http://localhost:8000")
+    print("=" * 50)
+    
     # Run server
-    uvicorn.run(app, host="0.0.0.0", port=8002)
+    uvicorn.run(app, host="0.0.0.0", port=8000)

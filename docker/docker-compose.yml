@@ -1,0 +1,20 @@
+services:
+  autodw-app:
+    build: .
+    ports:
+      - "8002:8002"  # AutoDW runs on port 8002
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    environment:
+      - PORT=8002
+      - HOST=0.0.0.0
+      - AUTO_OPEN_BROWSER=true
+    restart: always
+    container_name: autodw-production
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
